@@ -11,4 +11,4 @@ ENV KUBE_CONFIG ''
 COPY start.sh .
 RUN chmod +x start.sh
 RUN mkdir ~/.kube && touch ~/.kube/config
-CMD ["/root/start.sh"]
+ENTRYPOINT [ "/root/start.sh" ]
